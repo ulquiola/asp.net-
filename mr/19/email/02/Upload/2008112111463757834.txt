@@ -1,0 +1,102 @@
+在应用PHP和ORACLE数据库的时候,首先应该配置一个PHP+ORACLE数据库的环境，这里使用的是PHP Version 5.0.4，Apache/2.0.59 (Win32)和Oracle9i Release 9.2.0.1.0。
+
+  一. 安装ORACLE数据库,这里创建的全局数据库名是mrsoft,SID是root,数据库的密码是root.
+
+在本章的示例和范例中,使用的是全局数据库"mrsoft"下的"system"用户,其密码是"root".
+
+在"system"用户下分别创建了3个表:"tb_user"\"tb_user2"\"tb_user3",还应用了一个"system"用户的系统表"HELP".
+
+
+将数据表中的数据导入到全局数据库"mrsoft"下的"system"用户的表中,
+
+
+**********************************数据导入**********************************************
+(1)单机"开始"按钮,选择"运行"命令;
+(2)在弹出的对话框中输入"cmd",单机"确定"按钮;
+(3)然后在弹出的命令模式下输入:
+
+C:\Documents and Settings\Administrator>imp system(用户名)/root(密码)@root(服务名) file=d:\tb_user.dmp(数据表文件存储的位置) fromuser=system(方案名) ign
+ore=y commit=y grants=y;
+
+imp system/root@mrsoft file=D:\tb_user2.dmp fromuser=system ignore=y commit=y grants=y;
+
+(4)最后按"回车"键即可.
+****************************************************************************************
+
+
+**********************************数据导出**********************************************
+
+C:\Documents and Settings\Administrator>exp system（登录用户名）/root（登录口令）@mrsoft（服务名） file=C:\table.dmp(文件导出的位置) t
+ables=system（方案名）.tb_user（数据表名，如果有多个数据表则用逗号分隔） grants=y
+
+exp system/root@mrsoft file=d:\tb_user2.dmp tables=system.tb_user2 grants=y;
+
+****************************************************************************************
+
+
+  二. 安装Apache服务器和PHP.这里将Apache服务器和PHP都安装到"F:\oracle\ora92\Apache"目录下
+
+Apache服务器配置:
+
+配置Apache服务器主要就是在“F:\oracle\ora92\Apache\Apache2\conf“目录下的httpd.conf文件中进行的，用记事本打开该文件。
+
+（1）定位到“DocumentRoot”一行，可以将该路径修改为你认为合适的路径，这里设置为“DocumentRoot "F:\oracle\webpage"”。定位到"<Directory "F:\oracle\webpage">",将该路径也设置为“"F:\oracle\webpage"”
+
+（2）定位到下面这行：DirectoryIndex index.html index.html.var，在其后面添加一个PHP 默认页，通常是index.php，如下：DirectoryIndex index.html index.html.var index.php。
+
+（3）为了使Apache识别PHP的相关扩展名，搜索并定位到下面这个部分：
+ <Directory "C:/Program Files/Apache Group/Apache2/cgi-bin"> 
+   AllowOverride None 
+   Options None 
+   Order allow,deny 
+   Allow from all 
+</Directory>
+在后面添加如下两行：
+AddType application/x-httpd-php .php .phtml .php3 .php4 
+AddType application/x-httpd-php-source .phps
+
+（4）指定php模块，找到并定位到如下这行：
+#LoadModule ssl_module modules/mod_ssl.so
+在下面添加一行：
+LoadModule php5_module F:/oracle/ora92/Apache/php5/php5apache2.dll
+使它指向PHP5目录下的php5apache2.dll文件，路径一定要准确。
+
+PHP的配置:
+
+（1）复制F:\oracle\ora92\Apache\php5\ext\目录下的.dll文件到C:\windows\ system32\（如果是windows2000操作系统，则为C:\WINNT\ system32\）目录下。
+（2）把F:\oracle\ora92\Apache\php5\ext\目录下的pphp.ini-dist文件拷贝到C:\windows\（如果是windows2000操作系统，则为C:\WINNT\）目录下。把php.ini-dist重命名为 php.ini ，并用记事本打开编辑：
+定位到register_globals = Off，将Off改为On；
+定位到extension_dir =".\"，将路径改为"F:\oracle\ora92\Apache\php5\ext"；
+查找到Windows Extensions将下面列举的
+; extension=php_gd2.dll
+; extension=php_mysql.dll
+; extension=php_oci8.dll
+; extension=php_oracle.dll
+将其前面的“；”去掉，如果需要使用其他的模块，把前面的“；”去掉就可以了。然后关闭保存该文件。重新启动Apache服务器.
+
+
+
+到次PHP+ORACLE数据库的环境配置完成，注意：在配置PHP+ORACLE数据库时，Oracle9i 支持PHP Version 5.0版本，不能使用其他高版本的PHP。要想使用更高版本的PHP，可能需要更高版本的ORACLE数据库，这里没有深入的研究更多的配置方案，只能由广大的读者自己去研究探讨。
+
+
+在完成PHP+ORACEL的环境配置之后，为了执行本章范例中的程序，需要将3个数据表导入到数据库中，数据表文件存储于“光盘/mingrisoft/16/data/”文件夹下：分别是：tb_user.dmp、tb_user2.dmp和tb_user3.dmp。
+要将这3个数据表导入到全局数据库中的“system”用户下：
+导入数据表的方法如下：
+*********       **********数据导入***********************************
+(1)单机"开始"按钮,选择"运行"命令;
+(2)在弹出的对话框中输入"cmd",单机"确定"按钮;
+(3)然后在弹出的命令模式下输入:
+
+C:\Documents and Settings\Administrator>imp system(用户名)/root(密码)@root(全局数据库名) file=d:\tb_user.dmp(数据表文件存储的位置) fromuser=system(方案名) ign
+ore=y commit=y grants=y;
+
+输入的命令：
+imp system/root@mrsoft file=D:\tb_user2.dmp fromuser=system ignore=y commit=y grants=y;
+
+(4)最后按"回车"键即可.
+
+命令解释：将存储在“D:\”文件夹下的数据表文件“tb_user2.dmp”导入到全局数据库“mrsoft”下中，登录的用户名是“system”，密码是“root”，方案的名称是“system”。
+
+
+
+

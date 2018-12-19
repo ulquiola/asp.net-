@@ -1,0 +1,19 @@
+<script language="vbscript" runat="server">
+sub application_onstart
+	application("UserName")="ËùÓĞÈË"
+	application("head")="0.gif"
+	application("message")=""
+end sub
+</script>
+<script language="vbscript" runat="server">
+sub session_onstart
+end sub
+</script>
+<script language="vbscript" runat="server">
+sub Session_OnEnd
+end sub
+</script>
+<script language="vbscript" runat="server">
+sub application_onend
+end sub
+</script>

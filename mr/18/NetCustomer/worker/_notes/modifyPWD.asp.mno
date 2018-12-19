@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs" value="name:ywynumber;datatype:202,name:name;datatype:202,name:password;datatype:202" />
+	<infoitem key="UD_rs_userNO" value="name:userno;datatype:202,name:password;datatype:202" />
+</info>

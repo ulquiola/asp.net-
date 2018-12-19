@@ -1,0 +1,29 @@
+/* 列表页样式*/
+body,form,input,h1,table{font:9pt/14pt Georgia,Verdana,"sans-serif","宋体";color:#333;margin:0;background:url(../images/bg_main.gif) repeat-x;}
+body{background:#f6f6ea;}
+img{border:0;}
+a{color:#70B817;text-decoration:none;}
+a:hover{color:#FF3992;text-decoration:underline;}
+#header{background:url(../images/banner.gif) repeat-x; height:186;margin:0;padding:0;}
+#header img{margin-left:0px;background:url(../images/banner.gif) repeat-x; }
+#menu{background:url(../images/bg_search.gif) repeat-x;height:31px; border-top:2px solid #3D9A13;border-bottom:2px solid #3D9A13;padding:2px 0 0 5px;}
+#menu img{margin-right:5px;}
+#menu .input{margin-bottom:4px;padding:3px; border:1px solid #369;}
+#footer{background:url(../images/bg_bottom.jpg);height:183px}
+#mainList{text-align:center;padding:2px 0 10px 0;}
+.List{background:#3D9A13;margin:0;}
+.List th{background:#70B817;text-align:center;padding:2px;}
+.List td{word-break:break-all;padding:5px;}
+.ListID{width:8%;background:#F6FFDA;font-size:8pt;color:#333;text-align:center;}
+.ListInfo{width:45%;background:#f5f5f5;color:#333;text-align:left;}
+.ListSend{width:8%;background:#F6FFDA;color:#70B817;text-align:center;}
+.ListPick{width:8%;background:#f3f3f3;color:#70B817;text-align:center;}
+.Listhits{width:8%;background:#f3f3f3;color:#FF0033;text-align:center;}
+.ListComments{width:8%;background:#f3f3f3;color:#FF0033;text-align:center;}
+.ListDate{width:15%;background:#f3f3f3;font-size:8pt;color:#333;text-align:center;}
+.PageList{background:#fff;}
+.PageList img{float:left;}
+.PageList .Page{float:right;}
+.PageList .Page a{color:#FF3992;}
+.PageList .Page a:hover{color:#FFF;background:#000;}
+

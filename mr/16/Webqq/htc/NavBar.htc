@@ -1,0 +1,50 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="ondocumentready" HANDLER="fninit" />
+<PUBLIC:ATTACH EVENT="onload" FOR="window" ONEVENT="CreateFunc()" />
+<SCRIPT LANGUAGE=javascript>
+function fninit(){
+   // alert("hhhhh")
+    strXml=element.innerHTML
+	var xmlDoc = new ActiveXObject("Msxml.DOMDocument");
+	xmlDoc.async = false;
+	xmlDoc.loadXML(strXml);
+	//alert(xmlDoc.xml)
+	objNodeList = xmlDoc.selectNodes("//Menubar");
+     
+	 sHTML =  "<table border='0' cellspacing='0' width='100%' height='24' align='center' cellpadding='0' calss='Bartable'>" 
+	 sHTML = sHTML + "	  <tr height='24'> "
+	// sHTML = sHTML + "      <td width='2%' class='BarOutTD' id='LEFT' onclick='moveright(document.all.MainMask,document.all.ZhuM)' style='CURSOR: hand;'><img src='images/arrlft.gif'></td>"
+	 sHTML = sHTML + "	     <td width='90%' class='BarOutTD'>"
+	 //======================================Ö÷²Ëµ¥=============================================
+	 sHTML = sHTML + "	       <span style='WIDTH: 100%; POSITION: relative; HEIGHT: 100%'>"
+	 sHTML = sHTML + "	          <span style='LEFT: 0px; WIDTH: 100%; CLIP: rect(0px 100% auto 0px); POSITION: absolute; TOP: 0px' id='MainMask'>"
+	 sHTML = sHTML + "	             <span id='mainMenu' style='LEFT: 0px; POSITION: absolute; TOP: 0px' >"
+	 sHTML = sHTML + "                  <table border='0' cellspacing='0'  cellpadding='1'><tr>"
+	for(var i=0; i<objNodeList.length; i++){	    
+	  MainMenuName = objNodeList.item(i).getAttribute("name")
+	  MainMenuImg = objNodeList.item(i).getAttribute("img")
+	   Url = objNodeList.item(i).getAttribute("url")
+	  sHTML = sHTML + "<td align='center' class='BarTDNM' bordercolor='#808080'>"
+	  sHTML = sHTML + "<table border='0' cellspacing='0' class='ButtonNM' width='100%'  cellpadding='0' state='off'onmouseover='biancss()' onmouseout='huifuCss()' onclick='clickbutton();fnShow(this)' Url='"+Url+"'>"
+	  sHTML = sHTML + "<tr>"
+	  sHTML = sHTML +  "<td width='100%' nowrap><p align='center'><span lang='zh-cn'><font size='2'><img border='0' src='images/"+MainMenuImg+"' width='18' height='18' align='absmiddle'>"+MainMenuName+"</font></span></td>" 
+	  sHTML = sHTML + "</tr>"
+	  sHTML = sHTML + "</table>"
+	  sHTML = sHTML + "</td>"
+	}
+
+	sHTML = sHTML + "</tr></table></span></span></span>" 
+	//====================================================================================================    
+	sHTML = sHTML + "</td>"
+	//sHTML = sHTML + "<td width='2%' class='BarOutTD' id='RIGHT' onclick='moveleft(document.all.MainMask,document.all.ZhuM)' style='CURSOR: hand;'><img src='images/arrrgh.gif'></td>"   
+	sHTML = sHTML +  "</tr>"
+	sHTML = sHTML +	"</table>"	    
+	element.innerHTML =  sHTML 
+	//alert(sHTML)
+}
+function CreateFunc(){
+    var tmp = document.createElement("<script language='javascript' src='HTC/NavBar.js'>'>");
+	element.appendChild(tmp)
+}
+</script>
+</PUBLIC:COMPONENT>

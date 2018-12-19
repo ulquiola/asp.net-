@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>提交</title>
+<link rel="STYLESHEET" type="text/css" href="htmlediter.css">
+<script src="abc.js" language="JScript"></script>
+<script language="JavaScript">
+//打开图片列表窗口,并设置接收返回值的目标 
+function openImageList(href) {
+    var newwin=window.open(href,"","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=520,height=400");
+    newwin.focus();
+    return;
+}
+//打开附件列表窗
+function openFileList(href) {
+	var newwin=window.open(href,"","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=520,height=400");
+	newwin.focus();
+	return;
+}
+//接收返回的图片代码,并插入图片
+function receiveVal(val) {
+	UploadComplete(val);
+}
+//接收返回的文件链接代码,并插入
+function receiveFileVal(val) {
+	myEditor.pasteHTML(val);
+}
+//-->
+
+</script>
+</head>
+<body SCROLL="no" STYLE="border: 0pt" bgcolor="white">
+<fieldset>
+</fieldset>
+<iframe ID="edit1" SRC="editor.htm" NAME="myEditor" style="width: 100%; height: 90%;"></iframe>
+<iframe id="uploadback" name="uploadback" style="display:none"></iframe>
+<script language="javascript">
+if((window.navigator.userAgent.indexOf("IE 5") < 1) && (window.navigator.userAgent.indexOf("IE 6") < 1)) {
+	alert("请使用Microsoft Internet Explorer 5.0\n或更高版本的浏览器！");
+	window.close();
+}
+window.onload = init;
+window.onresize = fixSize;
+</script>
+</body>
+</html>

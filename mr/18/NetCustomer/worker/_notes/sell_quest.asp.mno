@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs" value="name:ID;datatype:3,name:name;datatype:202,name:khname;datatype:202,name:spname;datatype:202,name:pack;datatype:202,name:D_date;datatype:135,name:sellsum;datatype:3,name:price;datatype:5,name:zmoney;datatype:5" />
+	<infoitem key="UD_rs_user" value="name:ywynumber;datatype:202,name:name;datatype:202,name:workqy;datatype:3" />
+	<infoitem key="UD_rs_money" value="name:sMoney;datatype:5" />
+</info>

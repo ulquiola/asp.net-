@@ -1,0 +1,8 @@
+运行本程序，请从www.aspemail.com处下载并安装AspEmail组件。
+
+
+
+在运行程序时，要将下面的代码中Mail.Host的值，也就是IP地址修改为EMAIL主机的IP
+Mail.Host="192.168.1.41"
+并且将下面的代码中mrlx修改为EMAIL主机名
+Mail.AddAddress Request.Form("mailto"),"mrlx"

@@ -1,0 +1,1 @@
+本示例主要应用if then else 语句，while wend 语句。通过recordcount函数来统计当前共有多少条记录。分页显示数据信息内容。本实例还用到了两个包含文件。

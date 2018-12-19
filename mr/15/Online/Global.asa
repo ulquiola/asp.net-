@@ -1,0 +1,25 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server"> 
+Sub Application_OnStart 
+
+' 当服务器开启时，设置用户计数器为0 
+Application("ActiveUsers") = 0 
+Application("ActiveUsersIP") = ""
+End Sub 
+Sub Session_OnStart 
+
+' 设置Session对象的有效时间为20分钟（也可以更长，但是越长对服务器的资源' 占用越多，因为服务器不接受少于20分钟的有效时间，所以设置少于20分钟的'有效时间是无效的） 
+Session.Timeout = 10
+Application("ActiveUserIP")
+' 当开始一个Session时用户计数器加1 
+Application.Lock 
+
+Application.UnLock 
+End Sub 
+Sub Session_OnEnd 
+
+' 当结束一个Session时用户计数器减1 
+Application.Lock 
+Application("ActiveUsers") = Application("ActiveUsers") - 1 
+Application.UnLock 
+End Sub 
+</SCRIPT> 

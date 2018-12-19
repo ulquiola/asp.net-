@@ -1,0 +1,91 @@
+.a1:link {
+	COLOR: #000066; TEXT-DECORATION: none
+}
+.a1:visited {
+	COLOR: #000066; TEXT-DECORATION: none
+}
+.a1:active {
+	COLOR: #000066; TEXT-DECORATION: none
+}
+.a1:hover {
+	COLOR: red;
+}
+
+.a2:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.a2:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.a2:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.a2:hover {
+	COLOR: red;
+}
+
+.a3:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.a3:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.a3:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.a3:hover {
+	COLOR: red;
+}
+
+
+BODY {
+	COLOR: #000066;
+	padding:0px;
+	font-size:9pt;
+}
+TD,TH {
+	FONT-SIZE:9pt; COLOR: #000066;
+		
+}
+.buttoncss {
+    font-family: "Tahoma", "宋体";
+    font-size: 9pt; color: #003399;
+    border: 1px #003399 solid;
+    color:006699;
+    BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;
+    background-color: #ffffff;
+    CURSOR: hand;
+    font-style: normal ;
+}
+
+.inputcss {  
+    font-size: 9pt; 
+    font-family: "宋体"; 
+    font-style: normal; 	
+ }
+.inputcss1 {  
+    font-size: 9pt; 
+    font-family: "宋体"; 
+    font-style: normal;
+	BORDER-BOTTOM: #085196 1px solid; 
+    BORDER-LEFT: #085196 1px solid; 
+    BORDER-RIGHT: #085196 1px solid; 
+    BORDER-TOP: #085196 1px solid;	
+ }
+.scrollbar{
+   SCROLLBAR-FACE-COLOR: #F0F0F0; 
+   FONT-SIZE: 9pt; 
+   SCROLLBAR-HIGHLIGHT-COLOR: #A7B5BE; 
+   SCROLLBAR-SHADOW-COLOR: #A7B5BE; 
+   SCROLLBAR-3DLIGHT-COLOR: #E2E2E2; 
+   SCROLLBAR-ARROW-COLOR: #A7B5BE; 
+   SCROLLBAR-TRACK-COLOR: #E2E2E2;
+   SCROLLBAR-DARKSHADOW-COLOR: #F0F0F0;
+
+ }
+ .btn_grey {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #333333; PADDING-TOP: 1px; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: "宋体"; HEIGHT: 19px; BACKGROUND-COLOR: #eeeeee
+}

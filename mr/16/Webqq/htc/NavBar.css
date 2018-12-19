@@ -1,0 +1,15 @@
+sml\:Menubar
+{
+    BEHAVIOR: url("htc/NavBar.htc")
+}
+
+.BarOutTD { background-color: #EEEEEE; padding-top: 2px; padding-bottom: 2px; border: #0099CC solid; border-width: 0px 0px 1px}
+.BarTDEnd { cursor:hand; border-color: #FFFFFF #006699; padding-top: 1px; padding-right: 2px; padding-bottom: 1px; padding-left: 2px; border-style: solid; border-top-width: 0px; border-right-width: 2px; border-bottom-width: 0px; border-left-width: 1px;}
+.BarTDNM { cursor:hand; border-color: #FFFFFF #006699; padding-top: 1px; padding-right: 2px; padding-bottom: 1px; padding-left: 2px; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 1px;}
+.ButtonHL { cursor:hand;  background-color: #C5D5FC; border: #006699; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 10pt}
+.BarTDStart { cursor:hand; border-color: #FFFFFF #006699; padding-top: 1px; padding-right: 2px; padding-bottom: 1px; padding-left: 2px; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 2px;}
+.BarTDClk { cursor:hand; border-color: #FFFFFF #006699; padding-top: 1px; padding-right: 2px; padding-bottom: 1px; padding-left: 2px; background-color: #B7CAF5; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 1px;; font-weight: bold}
+.ButtonNM { cursor:hand; border: 1px #EEEEEE solid; font-size: 10pt}
+.ButtonClk { cursor:hand; border: 1px #B7CAF5 solid; font-size: 10pt; font-weight: normal; font-style: normal}
+.BarOutTDMain { padding-top: 2px; padding-bottom: 2px }
+.Bartable {  border: #0099FF; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}

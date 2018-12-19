@@ -1,0 +1,2 @@
+<object runat="server" scope="Session" id="Conn" progid="ADODB.Connection"></object>
+<object runat="server" scope="Session" id="Par" progid="ADODB.Parameter"></object>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_sp" value="name:spnumber;datatype:202,name:spname;datatype:202,name:pack;datatype:202" />
+	<infoitem key="UD_rs_user" value="name:ywynumber;datatype:202,name:name;datatype:202,name:workqy;datatype:3" />
+	<infoitem key="UD_rs_kh" value="name:khnumber;datatype:202,name:khname;datatype:202,name:qyname;datatype:3" />
+</info>

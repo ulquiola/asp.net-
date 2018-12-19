@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>ASP动态网页实例</title>
+	<style>
+	body{
+		margin:12px;
+		font-size:12px;
+	}
+	</style>
+  </head>
+  <body>
+    现在的时间是：<%=Time()%>
+  </body>
+</html>

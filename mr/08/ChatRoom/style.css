@@ -1,0 +1,26 @@
+<!--
+td           { font-size: 9pt;font_name:ËÎÌו;; line-height: 16pt}
+a:hover      { color: #ff0000; text-decoration: underline; font-size: 9pt }
+a            { font-size: 9pt; color: #0099ff; text-decoration: none }
+p {  font-size: 9pt; font-family: "ËÎÌו"; line-height: 11pt}
+/*???????*/
+INPUT.Style_button {
+	BORDER-RIGHT: #C60001 1px solid; BORDER-TOP: #C60001 1px solid; FONT-SIZE: 9pt; BACKGROUND: #ffcccc; BORDER-LEFT: #C60001 1px solid; COLOR: #C60001; BORDER-BOTTOM: #C60001 1px solid;HEIGHT: 20px;width: 40px
+}
+INPUT.Sytle_text {
+	BORDER-RIGHT: #C6E3F7 1px solid; BORDER-TOP: #C6E3F7 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #C6E3F7 1px solid;BORDER-BOTTOM: #C6E3F7 1px solid;HEIGHT: 18px
+}
+INPUT.Style_subject {
+	BORDER-RIGHT: #C6E3F7 1px solid; BORDER-TOP: #C6E3F7 1px solid;FONT-SIZE: 9pt; BORDER-LEFT: #C6E3F7 1px solid; BORDER-BOTTOM: #C6E3F7 1px solid;  HEIGHT: 18px; Width: 390px
+}
+INPUT.Style_button_del {
+	background-image:url(images/btn.gif); background-position:center; background-repeat:no-repeat;
+	BORDER-RIGHT: #C67131 1px solid; BORDER-TOP: #C67131 1px solid; BORDER-LEFT: #C67131 1px solid; BORDER-BOTTOM: #C67131 1px solid; HEIGHT: 23px;width: 104px;
+}
+INPUT.Style_nj {
+	BORDER-RIGHT: #C6E3F7 1px solid; BORDER-TOP: #C6E3F7 1px solid;FONT-SIZE: 9pt; BORDER-LEFT: #C6E3F7 1px solid; BORDER-BOTTOM: #C6E3F7 1px solid; HEIGHT: 18px; Width: 362px
+}
+INPUT.Style_upload {
+	BORDER-RIGHT: #C6E3F7 1px solid; BORDER-TOP: #C6E3F7 1px solid;FONT-SIZE: 9pt; BORDER-LEFT: #C6E3F7 1px solid; BORDER-BOTTOM: #C6E3F7 1px solid; HEIGHT: 18px; Width: 290px
+}
+-->

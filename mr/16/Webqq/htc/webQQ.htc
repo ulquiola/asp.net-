@@ -1,0 +1,88 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="ondocumentready" HANDLER="fninit" />
+
+<SCRIPT LANGUAGE=javascript>
+function fninit(){  
+ strXml=element.innerHTML
+	var xmlDoc = new ActiveXObject("Msxml.DOMDocument");
+	xmlDoc.async = false;
+	xmlDoc.loadXML(strXml);
+	objNodeList = xmlDoc.selectNodes("//MGROUP");
+	   sHTML =  "<table width='100%' height='100%' border='0' cellspacing='0' cellpadding='0'>"
+		for(i=0;i<objNodeList.length;i++){
+		  if(i!=0){
+		  strdisplay=" style='display:none'"
+		  }
+		  else{
+		   strdisplay = ""
+		  }
+		sHTML += "<tr id='GroupTr'>"
+			sHTML += "<td height='18' bgcolor='#FF9933' align='center' class='groupbar' onclick='showSelectedItem("+i+")'>"+objNodeList.item(i).getAttribute("name")+"</td>"
+			sHTML += "</tr>"
+			sHTML += "<tr id='FrameTr'"+strdisplay+">"
+			  sHTML += "<td>"
+    		    sHTML += "<div id='Layer1' style='position:relative; width:100%; height:100%; z-index:3;'>" 
+       		      sHTML += "<div id='mask' style='position:absolute; width:100%; height:100%; z-index:6; left: 0; top: 0; clip: rect(0 100% 100% 0);'>"
+                      sHTML += "<div id='scrollbar' style='position:absolute; width:18;height:100%; z-index:5; top: 0px; left: 102px;'>"
+                          sHTML += "<table width='18' height='100%' align='right'>"
+							   sHTML += "<tr>"
+							sHTML += "<td height='18'><div align='right' id='upDiv' onmousedown='doMoveDown(this)' onmouseup='doStopMove(this)' style='cursor:hand'><img src='htc/Up.gif' width='17' height='17'></div></td>"
+							   sHTML += "</tr>"
+							   sHTML += "<tr>"
+								 sHTML += "<td></td>"
+							   sHTML += "</tr>"
+							   sHTML += "<tr>"
+								 sHTML += "<td height='18'><div align='right' id='downDiv' onmousedown='doMoveUp(this)' onmouseup='doStopMove(this)' style='cursor:hand'><img src='htc/down.gif' width='17' height='17'></div></td>"
+							   sHTML += "</tr>"	   
+						  sHTML += "</table>"
+						 sHTML += "</div>"
+						 sHTML += "<div id='menu' style='position:absolute; width:100%; z-index:4; top: 0;'>"
+						   sHTML += "<table border='0' width='100%' id='contact'>"
+						   subHTML = ""
+						     for(j=0;j<objNodeList.item(i).childNodes.length;j++){
+							 faceimg = objNodeList.item(i).childNodes.item(j).getAttribute("face")
+							 online = objNodeList.item(i).childNodes.item(j).getAttribute("online")
+							 if(faceimg==""){
+							 if(online=="0"){
+								var tempStr=faceimg;
+								alert(tempStr.lastIndexOf("_0"));
+								if(tempStr.lastIndexOf("_0")<1){//控制下线时显示的图片
+								
+									tempStr=tempStr.substring(0,tempStr.lastIndexOf("."))+"_0.gif";
+								}
+								faceimg=tempStr;				 
+		 
+							 }
+							 else{
+							 var tempStr=faceimg;
+							if(tempStr.lastIndexOf("_0")>1){	//控制上线时显示的图片
+								tempStr=tempStr.substring(0,tempStr.lastIndexOf("_0"))+".gif";
+							}							 
+							faceimg=tempStr;
+							 }
+							 }
+							 UserName = objNodeList.item(i).childNodes.item(j).getAttribute("name")
+							 UserID = objNodeList.item(i).childNodes.item(j).getAttribute("UserID")
+							   subHTML += "<tr>"
+							   subHTML +=  "<td ondblclick='fnOpenWin("+UserID+");resetFace("+UserID+")' onmouseover='biancss(this)' onmouseout='huifuCss(this)' class='ItemLL'>"+"<img src='"+faceimg+"'  align='absmiddle' id='Img"+UserID+"' name='faceImg'>"+UserName+"</td>"
+							   subHTML += "</tr>"
+							 }
+						  sHTML += subHTML + "</table>"
+						 sHTML += "</div>"
+            		sHTML += "</div>"
+               sHTML +="</div>"
+			sHTML +="</td>"
+		  sHTML +="</tr>"
+		  }
+		sHTML += "</table>"
+	element.innerHTML =  sHTML 
+	//document.all.ZhuM.style.visibility = "visible"
+}
+/*
+function CreateFunc(){
+    var tmp = document.createElement("<script language='javascript' src='HTC/webQQ.js'>'>");
+	element.appendChild(tmp)
+}
+*/
+</script>
+</PUBLIC:COMPONENT>

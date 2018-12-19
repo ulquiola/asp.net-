@@ -1,0 +1,7 @@
+[DEFAULT]
+BASEURL=http://localhost:8033/22/mainmenu.asp
+[DOC#10]
+BASEURL=http://localhost:8033/22/webQQ_refrash.asp
+[InternetShortcut]
+URL=http://localhost:8033/22/mainmenu.asp
+Modified=D03DDF0367E2C80101

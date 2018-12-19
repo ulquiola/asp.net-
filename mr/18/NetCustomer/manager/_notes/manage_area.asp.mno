@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_province" value="name:ID;datatype:3,name:Name;datatype:202,name:TypeID;datatype:3,name:Father;datatype:3,name:TypeName;datatype:202" />
+	<infoitem key="UD_rs_city" value="name:ID;datatype:3,name:Name;datatype:202,name:TypeID;datatype:3,name:Father;datatype:3,name:TypeName;datatype:202" />
+	<infoitem key="UD_rs_town" value="name:ID;datatype:3,name:Name;datatype:202,name:TypeID;datatype:3,name:Father;datatype:3,name:TypeName;datatype:202" />
+</info>

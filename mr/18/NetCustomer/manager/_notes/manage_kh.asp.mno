@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs" value="name:khnumber;datatype:202,name:khsymbol;datatype:202,name:khname;datatype:202,name:khtype;datatype:202,name:khgrade;datatype:202,name:sellsum;datatype:3,name:qyname;datatype:3,name:frdb;datatype:202,name:address;datatype:202,name:postcode;datatype:202,name:tel;datatype:202,name:fax;datatype:202,name:email;datatype:202,name:homepage;datatype:202,name:khh;datatype:202,name:zh;datatype:202,name:memo;datatype:202" />
+</info>

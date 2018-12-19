@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs" value="name:spnumber;datatype:202,name:spsymbol;datatype:202,name:spname;datatype:202,name:pack;datatype:202,name:sccs;datatype:202,name:type;datatype:202,name:price;datatype:5,name:kwtype;datatype:202,name:memo;datatype:202" />
+</info>
